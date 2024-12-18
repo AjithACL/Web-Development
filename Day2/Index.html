@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <h1>Flex example</h1>
+    <p>The flex property is a block level element so it take the full length of the element</p>
+    <div class="flex-container">
+       
+        <p class="flex-items">item 1</p>
+        <p class="flex-items">item 2</p>
+        <p class="flex-items">item 3</p>
+        <p class="flex-items">item 4</p>
+    </div>
+    <h1>inline flex example</h1>
+    <p>so the inline flex is a flex property it won't take the full width of the parent </p>
+    
+    <div class="inline-flex-container">
+        <p class="inline-flex-items">item 1</p>
+        <p class="inline-flex-items">item 2</p>
+        <p class="inline-flex-items">item 3</p>
+    </div>
+    <h1>Flex grow property</h1>
+    <p>Depend upon the flex-grow value each p tag will extend its width depend upon the parent size</p>
+    <p>ex: for p one .item1{flex-grow:1} .item2{flex-grow:2} .item3{flex-grow:3}</p>
+    <div class="flex-grow-container">
+        <p class="flex-grow-items item1">item 1</p>
+        <p class="flex-grow-items item2">item 2</p>
+        <p class="flex-grow-items item3">item 3</p>
+    </div>
+    <h1>flex-shrink</h1>
+    <div class="flex-shrink-container">
+        <p class="flex-shrink-item flex-shrink-one">item 1</p>
+        <p class="flex-shrink-item flex-shirnk-two">item 2</p>
+        <p class="flex-shrink-item flex-shrink-three">item 3</p>
+    </div>
+  <p>  so we have three properties in the flex they are flex-grow, flex-shrink, flex-basis and the combination of this three is flex
+    flex: flex-grow flex-shrink flex-basis
+    flex basis is the default size between the flex-grow and flex-shrink </p>
+    <h1>flex-wrap</h1>
+    <p>flex-wrap: wrap</p>
+    <div class="flex-wrap-container">
+        <p class="flex-wrap-items">item 1</p>
+        <p class="flex-wrap-items">item 2</p>
+        <p class="flex-wrap-items">item 3</p>
+        <p class="flex-wrap-items">item 4</p>
+        <p class="flex-wrap-items">item 5</p>
+        <p class="flex-wrap-items">item 6</p>
+        <p class="flex-wrap-items">item 7</p>
+        <p class="flex-wrap-items">item 8</p>
+    </div>
+    <h1>flex-wrap :wrap-reverse</h1>
+    <p>when we give flex-wrap: wrap-reverse the first element will place at the bottom left other become above the last line</p>
+    <div class="flex-reverse-wrap">
+        <p class="flex-reverse-wrap-items">item 1</p>
+        <p class="flex-reverse-wrap-items">item 2</p>
+        <p class="flex-reverse-wrap-items">item 3</p>
+        <p class="flex-reverse-wrap-items">item 4</p>
+        <p class="flex-reverse-wrap-items">item 5</p>
+        <p class="flex-reverse-wrap-items">item 6</p>
+        <p class="flex-reverse-wrap-items">item 7</p>
+        <p class="flex-reverse-wrap-items">item 8</p>
+        <p class="flex-reverse-wrap-items">item 9</p>
+        <p class="flex-reverse-wrap-items">item 10</p>
+    </div>
+    <h1>flex-direction: row-reverse</h1>
+    <div class="row-reverse-container">
+        <p class="items">item 1</p>
+        <p class="items">item 2</p>
+        <p class="items">item 3</p>
+        <p class="items">item 3</p>
+         <p class="items">item 3</p> 
+         <p class="items">item 3</p>
+         <p class="items">item 3</p>
+         <p class="items">item 3</p>
+         <p class="items">item 3</p>
+         <p class="items">item 3</p>
+         <p class="items">item 3</p>
+         <p class="items">item 3</p>
+         <p class="items">item 8</p>
+        
+    </div>
+    <h1>flex-direction: column</h1>
+    <div class="flex-column-container">
+        <p class="items">item 1</p>
+        <p class="items">item 2</p>
+        <p class="items">item 3</p>
+    </div>
+    <h1>flex-direction: column-reverse</h1>
+    <div class="flex-column-reverse">
+        <p class="items">item 1</p>
+        <p class="items">item 2</p>
+        <p class="items">item 3</p>
+    </div>
+    <h1>order:integer</h1>
+    <div class="order-flex-item-properties-container">
+        <p class="items" style="order:3;">items 1</p>
+        <p class="items" style="order:1">items 2</p>
+        <p class="items" style="order:2">items 3</p>
+    </div>
+   
+</body>
+</html>

@@ -1,0 +1,125 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.flex-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.flex-items{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    margin: 0 10px;
+}
+.inline-flex-container{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+.inline-flex-items{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    padding: 20px;
+    margin:10px;
+}
+.flex-grow-container{
+    display: flex;
+    height: 150px;
+    width: 500px;
+    
+}
+.flex-grow-items{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    margin: 10px;
+}
+.item1{
+    flex-grow: 1;
+}
+.item2{
+    flex-grow: 2;
+}
+.item3{
+    flex-grow: 3;
+}
+.flex-shrink-container{
+    display: flex;
+    height: 150px;
+    width: 600px;
+}
+
+.flex-shrink-item{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    margin: 0 10px;
+    display: flex;
+
+}
+.flex-shrink-one{
+    flex: 1 1 150px;
+    /* flex: flex-grow flex-shrink flex-basis; */
+}
+.flex-shrink-two{
+    flex: 1 2 150px;
+}
+
+.flex-shrink-three{
+    flex: 1 0 150px;
+}
+.flex-wrap-container{
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-wrap-items{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    margin:10px
+}
+.flex-reverse-wrap{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    width: 600px;
+    background-color: dodgerblue;
+}
+.flex-reverse-wrap-items{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    margin: 20px;
+ 
+}
+.row-reverse-container{
+    width: 300px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.items{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    margin: 10px;
+}
+.flex-column-container{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.flex-column-reverse{
+    width: 500px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.order-flex-item-properties-container{
+    display: flex;
+    width: 700px;
+}

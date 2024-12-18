@@ -122,4 +122,43 @@
 .order-flex-item-properties-container{
     display: flex;
     width: 700px;
+    
 }
+.relative{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    position: relative;
+    top:10px;
+    left:200px;
+}
+.parent-relative{
+    height: 300px;
+    width: 300px;
+    background-color: dodgerblue;
+    position: relative;
+}
+.child-absolute{
+    height: 100px;
+    width: 100px;
+    background-color: orange;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+}
+.fixed{
+    height: 100px;
+    width: 100px;
+    background-color: darkorange;
+    
+}
+.fixed-element {
+    position: fixed;
+    top: 0; /* Aligns the element to the top of the viewport */
+    left: 0; /* Aligns the element to the left of the viewport */
+    width: 100%; /* Makes the element span the full width of the viewport */
+    background-color: #fff; /* Sets a background color */
+    z-index: 1000; /* Ensures the element stays above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for better visibility */
+  }

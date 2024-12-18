@@ -102,6 +102,38 @@
         <p class="items" style="order:1">items 2</p>
         <p class="items" style="order:2">items 3</p>
     </div>
+    <h1>Position property</h1>
+    <h1>Static</h1>
+    <p>static is default flow of the document the position are fixed like block element flow and </p>
+    <h1>Relative</h1>
+    <p>we can use top,left, right and bottom to change the position it is not moving based on the parent</p>
+    <ul>
+        <li>It move from the current position</li>
+        <li>It won't give it own place </li>
+    </ul>
+    <div class="relative">
+        <p>relative: the box is moved 10px from top and 200px from left</p>
+    </div>
+    <h1>absolute</h1>
+    <p>by default its parent is body, until we mention the parent is relative</p>
+    <ul>
+        <li>it won't move from current position</li>
+        <li>if we give top:0; then it will placed at the top of the parent tag which is relative</li>
+    </ul>
+    <div class="parent-relative">
+        <div class="child-absolute">
+            <p>absolute: it moved to bottom:0 left:0 of the parent </p>
+        </div>
+    </div>
+    <h1>Position Fixed</h1>
+    <div class="fixed">
+        <p>Fixed</p>
+    </div>
+    <header class="fixed-element">
+        <h1>Fixed Header</h1>
+      </header>
+
+
    
 </body>
 </html>

@@ -1,5 +1,6 @@
 import "./Navbar.css"
-
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faBars } from "@fortawesome/free-brands-svg-icons";
 const Navbar=()=>{
 return(
 <>
@@ -18,6 +19,10 @@ return(
     <button className="Login-btn">Login</button>
     <button className="register-btn">Register</button>
 </div>
+<div className="bar">
+{/* <FontAwesomeIcon icon={faBars} /> */}
+</div>
+
 </nav>
 </>)
 }

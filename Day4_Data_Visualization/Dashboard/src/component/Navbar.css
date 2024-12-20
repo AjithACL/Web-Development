@@ -1,0 +1,48 @@
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 2px solid violet;
+}
+.nav-logo{
+  
+    margin:10px 20px;
+}
+nav ul li{
+
+    text-decoration: none;
+    margin: 20px 10px;
+}
+nav ul{
+    list-style: none;
+    display: inline-flex;
+    gap: 20px;
+    
+}
+nav .nav-btn button{
+    color:white;
+    padding:10px;
+    border-radius: 7px;
+}
+
+
+.Login-btn{
+    background-color: red;
+    margin-right: 10px;
+
+}
+.register-btn{
+    background-color: green;
+}
+.nav-btn{
+    margin: 15px 80px;
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+}
+
+@media (max-width:940px){
+    nav{
+        background-color: orange;
+    }
+}

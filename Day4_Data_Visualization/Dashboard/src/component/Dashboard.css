@@ -1,0 +1,47 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .dashboard-nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: orange;
+    padding: 20px;
+  }
+  .datavis{
+    display: flex;
+  }
+  .datavis h1{
+    margin-left: 20px;
+  }
+  .user-img{
+    border-radius: 50%;
+  }
+  .sidebar {
+    width: 250px;
+    background-color: rgb(85, 215, 238);
+    color: #fff;
+    padding: 20px;
+    height: 100vh;
+  }
+  .sidebar ul {
+    list-style: none;
+  }
+  
+  .sidebar ul li {
+    margin: 20px 0;
+  }
+  
+  .sidebar ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .sidebar ul li a:hover {
+    background-color: #34495e;
+  }
+  

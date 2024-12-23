@@ -1,45 +1,84 @@
-import React from 'react';
-import { Link } from 'react-router-dom';  // Import Link from react-router-dom
-import './Login.css';
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import "./Login.css";
 
 const Login = () => {
+  const [formData, setFormData] = useState({ email: "", password: "" });
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Get user data from local storage
+    const storedUser = JSON.parse(localStorage.getItem("userData"));
+
+    if (storedUser) {
+      const { email, password } = storedUser;
+
+      // Check if credentials match
+      if (formData.email === email && formData.password === password) {
+        navigate("/home"); // Navigate to /home
+      } else {
+        setError("Invalid email or password."); // Set a string
+      }
+    } else {
+      setError("No account found. Please register first."); // Set a string
+    }
+  };
+
   return (
-    <div className='container'>
+    <div className="container">
       <div>
         <h2>LOGIN</h2>
         <div>
-          {/* Add an image */}
           <img
-            src="Developer_image.png" // Replace with your image URL
+            src="Developer_image.png"
             alt="Register Illustration"
             height="100px"
           />
-          <br></br>
-          <form>
+          <br />
+          <form onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="">USERNAME :</label><br />
+              <label htmlFor="email">Email:</label>
+              <br />
               <input
-                type="username"
-                placeholder="Username"
-              /><br></br>
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+              />
+              <br />
             </div>
-            <br></br>
+            <br />
             <div>
-              <label htmlFor="">PASSWORD :</label><br></br>
+              <label htmlFor="password">Password:</label>
+              <br />
               <input
                 type="password"
+                name="password"
                 placeholder="Password"
-              /><br></br>
-              <br></br>
-                
-                <a href="" style={{display:"inline"}}>Forget Password</a>
-              
-            </div><br></br>
-            <button type="submit">LOGIN</button><br></br>
+                value={formData.password}
+                onChange={handleChange}
+              />
+              <br />
+            </div>
+            <br />
+            {error && <span className="error">{error}</span>} {/* Display error */}
+            <br />
+            <button type="submit">LOGIN</button>
+            <br />
             <div>
               <label htmlFor="">DON'T HAVE AN ACCOUNT?</label>
-              <Link to="/register"> SIGN UP</Link> {/* Link to Register page */}
-            </div><br />
+              <Link to="/register"> SIGN UP</Link>
+            </div>
+            <br />
           </form>
         </div>
       </div>

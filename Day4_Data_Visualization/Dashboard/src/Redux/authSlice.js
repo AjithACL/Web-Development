@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  user: null, // Currently logged-in user
-  registeredUsers: [], // Array to store registered users
-  error: null, // Error message
+  user: null, 
+  registeredUsers: [],
+  error: null, 
 };
 
 const authSlice = createSlice({

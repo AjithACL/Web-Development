@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setUser, setError } from "../Redux/authSlice";
+import { useNavigate, Link } from "react-router-dom";
 import "./Login.css";
 
 const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
-  const [error, setError] = useState("");
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { registeredUsers, error } = useSelector((state) => state.auth); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -15,72 +18,51 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Get user data from local storage
-    const storedUser = JSON.parse(localStorage.getItem("userData"));
+    const user = registeredUsers.find(
+      (user) =>
+        user.email === formData.email && user.password === formData.password
+    );
 
-    if (storedUser) {
-      const { email, password } = storedUser;
-
-      // Check if credentials match
-      if (formData.email === email && formData.password === password) {
-        navigate("/home"); // Navigate to /home
-      } else {
-        setError("Invalid email or password."); // Set a string
-      }
+    if (user) {
+      dispatch(setUser(user));
+      navigate("/home"); 
     } else {
-      setError("No account found. Please register first."); // Set a string
+      dispatch(setError("Invalid email or password."));
     }
   };
 
   return (
     <div className="Logincontainer">
-      <div>
-        <h2>LOGIN</h2>
+      <h2>Log In</h2>
+      <img src="Developer_image.png" alt="" />
+      <form onSubmit={handleSubmit}>
         <div>
-          <img
-            src="Developer_image.png"
-            alt="Register Illustration"
-            height="100px"
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+          
+            onChange={handleChange}
+           
           />
-          <br />
-          <form onSubmit={handleSubmit}>
-            <div>
-              <label htmlFor="email">Email:</label>
-              <br />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={formData.email}
-                onChange={handleChange}
-              />
-              <br />
-            </div>
-            <br />
-            <div>
-              <label htmlFor="password">Password:</label>
-              <br />
-              <input
-                type="password"
-                name="password"
-                placeholder="Password"
-                value={formData.password}
-                onChange={handleChange}
-              />
-              <br />
-            </div>
-            <br />
-            {error && <span className="error">{error}</span>} {/* Display error */}
-            <br />
-            <button type="submit">LOGIN</button>
-            <br />
-            <div>
-              <label htmlFor="">DON'T HAVE AN ACCOUNT?</label>
-              <Link to="/register"> SIGN UP</Link>
-            </div>
-            <br />
-          </form>
         </div>
+        <div>
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+           
+            onChange={handleChange}
+           
+          />
+        </div>
+        {error && <span className="error">{error}</span>}
+        <button type="submit">Log In</button>
+      </form>
+      <div>
+        Don't have an account? <Link to="/register">Sign Up</Link>
       </div>
     </div>
   );

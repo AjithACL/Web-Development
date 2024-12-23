@@ -44,4 +44,10 @@
   .sidebar ul li a:hover {
     background-color: #34495e;
   }
+  .logout-button{
+    background-color: blue;
+    padding: 10px;
+    border-radius: 7px;
+    color: white;
+  }
   

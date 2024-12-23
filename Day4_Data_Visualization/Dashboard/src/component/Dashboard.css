@@ -7,13 +7,15 @@
   .dashboard-nav{
     display: flex;
     justify-content: space-between;
-    background-color: orange;
-    padding: 20px;
+    background-color:#506EDC;
+    color: white;
   }
   .datavis{
     display: flex;
+    align-items: center;
+    margin:10px 20px;
   }
-  .datavis h1{
+  .datavis h3{
     margin-left: 20px;
   }
   .user-img{
@@ -21,9 +23,8 @@
   }
   .sidebar {
     width: 250px;
-    background-color: rgb(85, 215, 238);
-    color: #fff;
-    padding: 20px;
+    background-color:#FFF;
+    color: black;
     height: 100vh;
   }
   .sidebar ul {
@@ -31,23 +32,82 @@
   }
   
   .sidebar ul li {
-    margin: 20px 0;
+    margin:  2px 0;
   }
+  .sidebar ul li:hover {
+   background-color: #34495e ;
+   color: white;
+  }
+  .sidebar ul li a{
+    display: block;
+    margin-left: 10px;
+  }
+
+  .sidebar ul li a:hover  {
+    background-color: #34495e;
+    color: white;
+  }
+  .sidebar ul li button:hover{
+    background-color: white;
+  }
+
   
   .sidebar ul li a {
-    color: #ecf0f1;
+    color: black;
     text-decoration: none;
-    padding: 10px;
-    border-radius: 4px;
+   
+    border-radius: 2px;
   }
   
-  .sidebar ul li a:hover {
-    background-color: #34495e;
-  }
+  
   .logout-button{
-    background-color: blue;
+    background-color:#506EDC ;
     padding: 10px;
     border-radius: 7px;
     color: white;
+    margin-top: 5px;
+    border: 2px solid white;
+  }
+  .tiles{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    background-color: #e7e7e7;
+  }
+  .dashboard-body{
+    display: flex;
+  }
+  .tiles1 , .tiles2{
+    background-color: white;
+    height: 300px;
+    width: 500px;
+    margin-left: 30px;
+    margin-top:10px;
+    border-radius: 9px;
+    
+  }
+  .tiles3 ,.tiles4, .tiles5, .tiles6{
+    height: 200px;
+    width: 230px;
+    background-color: white;
+    margin-right: 20px;
+    border-radius: 9px;
+  }
+  .tiles3{
+   margin-bottom: 70px;
+   margin-left:30px;
+  }
+  .tiles5{
+    margin-left: 20px;
+  }
+  .user-info{
+    display: flex;
+    align-items: center; 
+  }
+  .user-info img{
+    margin-right: 20px;
+    margin-left: 10px;
   }
   

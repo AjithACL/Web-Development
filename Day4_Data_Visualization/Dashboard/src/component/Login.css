@@ -1,4 +1,4 @@
-.container {
+.Logincontainer {
   width: 300px;
   margin: 100px auto;
   padding: 20px;
@@ -11,13 +11,13 @@
 }
 
 
-.title {
+.Logincontainer  .title {
   font-size: 24px;
   margin-bottom: 20px;
   color: #333;
 }
 
-form {
+.Logincontainer  form {
   display: flex;
   flex-direction: column;
 }
@@ -26,7 +26,7 @@ form {
   margin-bottom: 15px;
 }
 
-input {
+.Logincontainer  input {
   width: 100%;
   padding: 5px;
   font-size: 16px;
@@ -34,19 +34,20 @@ input {
   border-radius: 5px;
 }
 
-button {
+.Logincontainer  button {
   padding: 10px;
   font-size: 16px;
   color: #0d0a0a;
-  background-color: #ff009983;
+  color:white;
+  background-color:hsl(131, 66%, 48%);;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
-.checkbox{
+.Logincontainer  .checkbox{
   display: flex;
-  background-color: rgb(255, 0, 187);
+  background-color:hsl(131, 66%, 48%);;
 }
-.checkbox input{
+.Logincontainer  .checkbox input{
   display: inline-block;
 }

@@ -79,7 +79,7 @@ const Register = () => {
   };
 
   return (
-    <div className="container">
+    <div className="Registercontainer">
       <div>
         <h2>SIGN UP</h2>
         <div>

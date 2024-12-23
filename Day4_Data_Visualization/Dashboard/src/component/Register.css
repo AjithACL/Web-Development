@@ -1,4 +1,4 @@
-.container {
+.Registercontainer {
   width: 400px;
   margin: 20px auto;
   padding: 20px;
@@ -8,40 +8,40 @@
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
 }
 
-.title {
+.Registercontainer .title {
   font-size: 24px;
   margin-bottom: 20px;
   color: #333;
 }
 
-form {
+.Registercontainer form {
   display: flex;
   flex-direction: column;
 }
 
-.input-group {
+.Registercontainer .input-group {
   display: flex;
   align-items: center; 
   margin-bottom: 15px;
 }
 
-label {
+.Registercontainer label {
   width: 120px; 
   text-align: left;
   margin-right: 20px;
 }
 
-input {
+.Registercontainer input {
   width: 100%; 
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-#email {
+.Registercontainer #email {
   margin-left: 20px;
 }
-button {
+.Registercontainer button {
   padding: 10px;
   font-size: 16px;
   color: #fff;

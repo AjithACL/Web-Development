@@ -31,9 +31,7 @@
     list-style: none;
   }
   
-  .sidebar ul li {
-    margin:  2px 0;
-  }
+  
   .sidebar ul li:hover {
    background-color: #34495e ;
    color: white;
@@ -78,6 +76,9 @@
   }
   .dashboard-body{
     display: flex;
+  }
+  .sidebar-dashboard{
+    margin-top: 0;
   }
   .tiles1 , .tiles2{
     background-color: white;

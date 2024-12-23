@@ -34,9 +34,9 @@ const Login = () => {
   return (
     <div className="Logincontainer">
       <h2>Log In</h2>
-      <img src="Developer_image.png" alt="" />
+      <img src="Developer_image.png" alt="" height="150px" width='150px'/>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="login-email">
           <label htmlFor="email">Email</label>
           <input
             type="email"
@@ -47,7 +47,7 @@ const Login = () => {
            
           />
         </div>
-        <div>
+        <div className="login-password">
           <label htmlFor="password">Password</label>
           <input
             type="password"
@@ -61,7 +61,7 @@ const Login = () => {
         {error && <span className="error">{error}</span>}
         <button type="submit">Log In</button>
       </form>
-      <div>
+      <div className="login-signup">
         Don't have an account? <Link to="/register">Sign Up</Link>
       </div>
     </div>

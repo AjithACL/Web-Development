@@ -33,7 +33,7 @@ const Dashboard = () => {
       <div className="dashboard-body">
       <div className="sidebar">
         <ul>
-          <li><Link to="/dashboard">Dashboard</Link></li>
+          <li><Link to="/dashboard" className="sidebar-dashboard">Dashboard</Link></li>
           <li><a href="#">Analytics</a></li>
           <li><a href="#">Settings</a></li>
         </ul>

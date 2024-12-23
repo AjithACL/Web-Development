@@ -1,11 +1,10 @@
 .Logincontainer {
   width: 300px;
   margin: 100px auto;
-  padding: 20px;
+  padding: 30px;
   border: 1px solid #fdfcfc;
   border-radius: 10px;
   text-align: center;
-  
   box-shadow: 0 4px 8px rgb(250, 239, 239);
  
 }
@@ -37,17 +36,32 @@
 .Logincontainer  button {
   padding: 10px;
   font-size: 16px;
-  color: #0d0a0a;
   color:white;
-  background-color:hsl(131, 66%, 48%);;
+  background-color:#506EDC;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
-.Logincontainer  .checkbox{
+.login-email input{
+  margin-left: 40px;
+}
+.login-password input{
+  margin-left: 10px;
+}
+.login-email{
   display: flex;
-  background-color:hsl(131, 66%, 48%);;
+  align-items: center;
+  justify-self: center;
+  margin: 10px;
 }
-.Logincontainer  .checkbox input{
-  display: inline-block;
+.login-password{
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  margin: 10px;
 }
+.login-dont{
+  margin-top: 60px;
+}
+
+

@@ -135,10 +135,10 @@
   margin-left: 10px;
 }
 
-.tiles {
+/* .tiles {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-  grid-template-rows: 200px 300px; /* 2 rows with different heights */
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 200px 300px; 
   gap: 10px; 
   padding: 10px;
   background-color: #e7e7e7;
@@ -152,17 +152,17 @@
 .tiles4 {
   background-color: white;
   border-radius: 9px;
-  grid-column: span 1; /* Each tile spans 1 column */
-  grid-row: 1/2; /* Place them in the first row */
+  grid-column: span 1; 
+  grid-row: 1/2; 
 }
 
 .tiles5,
 .tiles6 {
   background-color: white;
   border-radius: 9px;
-  grid-column: span 2; /* These tiles span 2 columns */
-  grid-row: 2/3; /* Place them in the second row */
-}
+  grid-column: span 2;
+  grid-row: 2/3;
+}  */
 
 .dashboard-body ul li {
   display: flex;
@@ -181,3 +181,5 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+
+

@@ -1,0 +1,58 @@
+.tiles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    grid-template-rows: 210px 310px; /* Set to auto to automatically adjust rows based on content */
+    gap: 20px; /* Increased gap between tiles */
+    padding: 20px; /* Space around the grid */
+    background-color: #e7e7e7;
+    height: auto; /* Auto height based on content */
+    width: 100%;
+  }
+  
+  .tiles1,
+  .tiles2,
+  .tiles3,
+  .tiles4 {
+    background-color: white;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 20px; /* Add padding inside the tiles */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure tiles stretch to available height */
+  }
+  
+  .tiles5,
+  .tiles6 {
+    background-color: white;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 20px; /* Add padding inside the tiles */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure tiles stretch to available height */
+    grid-column: span 2; /* These tiles span 2 columns */
+  }
+  .Tiles-background{
+    height: 100vh;
+    width: 1200px;
+  }
+  
+  @media (max-width: 1200px) {
+    .tiles {
+      grid-template-columns: repeat(3, 1fr); /* Adjust to 3 columns on medium screens */
+    }
+    .tiles5,
+    .tiles6 {
+      grid-column: span 1; /* Adjust spanning of tiles on smaller screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .tiles {
+      grid-template-columns: 1fr; /* Adjust to 1 column on small screens */
+    }
+  }
+  

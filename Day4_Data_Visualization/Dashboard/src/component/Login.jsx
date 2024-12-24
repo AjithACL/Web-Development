@@ -18,17 +18,21 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const user = registeredUsers.find(
-      (user) =>
-        user.email === formData.email && user.password === formData.password
-    );
-
-    if (user) {
-      dispatch(setUser(user));
-      navigate("/Dashboard");
-    } else {
+    if(formData.email === "ajith@gmail.com" && formData.password === "Ajith@123"){
+     navigate("/dashboard");
+    }else {
       dispatch(setError("Invalid email or password."));
     }
+
+    // const user = registeredUsers.find(
+    //   (user) =>
+    //     user.email === formData.email && user.password === formData.password
+    // );
+
+    // if (user) {
+    //   dispatch(setUser(user));
+    //   navigate("/Dashboard");
+    // } 
   };
 
   return (

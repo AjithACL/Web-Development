@@ -52,7 +52,7 @@ const Dashboard = () => {
             height="40px"
             width="40px"
             onClick={toggleUserDetails}
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer", margin:'0 10px' }}
           />
         </div>
       </div>
@@ -70,21 +70,21 @@ const Dashboard = () => {
               onClick={() => setActiveMenu("dashboard")}
               className={activeMenu === "dashboard" ? "active" : ""}
             >
-              <img src="Dashboard_icon.png" alt="" height="20px" width="20px" />
+              <img src="Dashboard_icon.png" alt="" height="20px" width="20px" style={{margin:'0 10px'}} />
               <span>Dashboard</span>
             </li>
             <li
               onClick={() => setActiveMenu("dataset")}
               className={activeMenu === "dataset" ? "active" : ""}
             >
-              <img src="Analytics.png" alt="" height="20px" width="20px" />
+              <img src="Analytics.png" alt="" height="20px" width="20px" style={{margin:'0 10px'}}/>
               <span>Dataset</span>
             </li>
             <li
               onClick={() => setActiveMenu("settings")}
               className={activeMenu === "settings" ? "active" : ""}
             >
-              <img src="Settings.png" alt="" height="20px" width="20px" />
+              <img src="Settings.png" alt="" height="20px" width="20px" style={{margin:'0 10px'}}/>
               <span>Settings</span>
             </li>
           </ul>

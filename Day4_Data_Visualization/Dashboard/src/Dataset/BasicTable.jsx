@@ -7,7 +7,9 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
-import { useState } from 'react';
+import SendIcon from '@mui/icons-material/Send';
+import { useState, useEffect } from 'react';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import './BasicTable.css';
 
 function createData(name, description, data, type, notes) {
@@ -20,7 +22,6 @@ export default function BasicTable() {
     createData('Ice cream sandwich', 'Cold dessert', 'Data2', 'Type B', '4.3'),
     createData('Eclair', 'Chocolaty treat', 'Data3', 'Type C', '6.0'),
     createData('Cupcake', 'Sweet snack', 'Data4', 'Type A', '4.3'),
-    createData('Gingerbread', 'Holiday snack', 'Data5', 'Type B', '3.9'),
   ]);
 
   const [showForm, setShowForm] = useState(false);
@@ -32,7 +33,6 @@ export default function BasicTable() {
     notes: '',
   });
   const [editingRow, setEditingRow] = useState(null); // Track which row is being edited
-
   const [showDeletePopup, setShowDeletePopup] = useState(false); // For the delete confirmation popup
   const [rowToDelete, setRowToDelete] = useState(null); // Row to delete
 
@@ -91,9 +91,23 @@ export default function BasicTable() {
 
   const isFormValid = newRow.name && newRow.description && newRow.data && newRow.type && newRow.notes;
 
+  // Save data to local storage when the "Send" button is clicked
+  const handleSend = () => {
+    localStorage.setItem('tableData', JSON.stringify(rows)); // Save rows to local storage
+    alert('Data has been saved to local storage!');
+  };
+
+  // Load data from local storage when the component mounts
+  useEffect(() => {
+    const savedData = localStorage.getItem('tableData');
+    if (savedData) {
+      setRows(JSON.parse(savedData)); // Load the saved data into rows
+    }
+  }, []);
+
   return (
     <div className="data-table">
-      <Button variant="contained" color="success" style={{margin:'10px 0'}} onClick={() => setShowForm(!showForm)}>
+      <Button variant="contained" color="success" style={{ margin: '10px 0' }} onClick={() => setShowForm(!showForm)}>
         {showForm ? 'Cancel' : 'Add +'}
       </Button>
 
@@ -143,19 +157,14 @@ export default function BasicTable() {
               value={newRow.notes}
               onChange={handleChange}
             />
-            <Button
-              variant="contained"
-              color="primary"
-              type="submit"
-              disabled={!isFormValid}
-            >
+            <Button variant="contained" color="primary" type="submit" disabled={!isFormValid}>
               {editingRow ? 'Update' : 'Submit'}
             </Button>
           </form>
         </div>
       )}
 
-      <TableContainer component={Paper}>
+      <TableContainer component={Paper} style={{ maxHeight: '400px', overflowY: 'auto' }}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
@@ -163,7 +172,7 @@ export default function BasicTable() {
               <TableCell align="right">Description</TableCell>
               <TableCell align="right">Data</TableCell>
               <TableCell align="right">Type</TableCell>
-              <TableCell align="right">Notes</TableCell>
+              <TableCell align="right">Path</TableCell>
               <TableCell align="right">Actions</TableCell>
             </TableRow>
           </TableHead>
@@ -205,6 +214,12 @@ export default function BasicTable() {
           </div>
         </div>
       )}
+
+      <div className="send-btn">
+        <Button variant="contained" endIcon={<SendIcon />} onClick={handleSend}>
+          Send
+        </Button>
+      </div>
     </div>
   );
 }

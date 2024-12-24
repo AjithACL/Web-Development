@@ -5,7 +5,6 @@ const Dataset =()=>{
       <div>
         <h1 style={{textAlign:'center'}}>Datasets</h1>
         <div className="dashboard-table">
-
         <BasicTable/>
         </div>
       </div>

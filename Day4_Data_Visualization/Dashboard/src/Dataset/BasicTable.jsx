@@ -93,7 +93,7 @@ export default function BasicTable() {
 
   return (
     <div className="data-table">
-      <Button variant="contained" color="success" onClick={() => setShowForm(!showForm)}>
+      <Button variant="contained" color="success" style={{margin:'10px 0'}} onClick={() => setShowForm(!showForm)}>
         {showForm ? 'Cancel' : 'Add +'}
       </Button>
 

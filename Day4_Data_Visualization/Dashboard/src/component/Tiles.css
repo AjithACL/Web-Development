@@ -37,7 +37,7 @@
   }
   .Tiles-background{
     height: 100vh;
-    width: 1200px;
+    width: 1150px;
   }
   
   @media (max-width: 1200px) {

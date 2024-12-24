@@ -1,54 +1,78 @@
-.Data-entry{
-    padding: 10px;
-    border: 1px solid black;
-    width: 350px;
-    position: absolute;
-    background-color: white;
-    top:15%;
-    border-radius: 7px;
-    left: 40%;
-}
-.Data-table{
-    position: relative;
-}
-.Data-entry form select{
-    width: 90%;
-    margin-left: 10px;
-    height: 30px;
-    background-color: rgb(240, 237, 235) ;
-    margin-top: 10px;
+.data-table{
+    width: 1000px;
 }
 
-.Data-entry form{
+.Data-entry {
+    padding: 20px;
+    border: 1px solid #ddd;
+    width: 400px;
+    position: absolute;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Data-entry h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .Data-entry form {
     display: flex;
     flex-direction: column;
-    
-}
-.Data-entry h3{
-    text-align: center;
-}
+  }
 
-
-.Data-entry form input{
-    width: 90%;
-    padding: 5px;
-    font-size: 16px;
-    height: 30px;
-    border: 1px solid #131212;
-    border-radius: 5px;
-    margin: 10px;
-    background-color: rgb(240, 237, 235);
-}
-.Data-entry form button{
-    margin-top:10px ;
-}
-.Data-entry form label{
+  
+  .Data-entry form label {
     margin-top: 10px;
-    text-align: start;
-    margin-left: 15px;
-}
-/* Styles for the delete popup */
-.delete-popup {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .Data-entry form input,
+  .Data-entry form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .Data-entry form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .Data-entry form button:hover {
+    background-color: #45a049;
+  }
+  
+  .Data-entry form input:focus,
+  .Data-entry form select:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  
+  .Data-entry form input::placeholder {
+    color: #888;
+  }
+  
+  /* Styles for the delete popup */
+  .delete-popup {
     position: fixed;
     top: 0;
     left: 0;

@@ -1,22 +1,21 @@
 .Logincontainer {
-  width: 300px;
+  width: 400px;
   margin: 100px auto;
   padding: 30px;
   border: 1px solid #fdfcfc;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 4px 8px rgb(250, 239, 239);
- 
+  border: 1px solid black;
+  animation: slidein 1s forwards;
 }
 
-
-.Logincontainer  .title {
+.Logincontainer .title {
   font-size: 24px;
   margin-bottom: 20px;
   color: #333;
 }
 
-.Logincontainer  form {
+.Logincontainer form {
   display: flex;
   flex-direction: column;
 }
@@ -25,7 +24,7 @@
   margin-bottom: 15px;
 }
 
-.Logincontainer  input {
+.Logincontainer input {
   width: 100%;
   padding: 5px;
   font-size: 16px;
@@ -33,35 +32,46 @@
   border-radius: 5px;
 }
 
-.Logincontainer  button {
+.Logincontainer button {
   padding: 10px;
   font-size: 16px;
-  color:white;
-  background-color:#506EDC;
+  color: white;
+  background-color: #506edc;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
-.login-email input{
+.login-email input {
   margin-left: 40px;
 }
-.login-password input{
+.login-password input {
   margin-left: 10px;
 }
-.login-email{
+.login-email {
   display: flex;
   align-items: center;
   justify-self: center;
   margin: 10px;
 }
-.login-password{
+.login-password {
   display: flex;
   align-items: center;
   justify-self: center;
   margin: 10px;
 }
-.login-dont{
-  margin-top: 60px;
+.login-error {
+  color: red;
+  margin: 10px;
+}
+.login-dont {
+  margin-top: 10px;
 }
 
-
+@keyframes slidein {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}

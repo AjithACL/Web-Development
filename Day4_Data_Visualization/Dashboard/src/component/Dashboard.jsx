@@ -4,19 +4,19 @@ import { useNavigate,Link } from "react-router-dom";
 import { logout } from "../Redux/authSlice"; 
 import "./Dashboard.css";
 import { useState } from "react";
-
 const Dashboard = () => {
-  const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 }); // Track the position of the menu
-  const [showMenu, setShowMenu] = useState(false); // State to toggle menu visibility
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((state) => state.auth.user); 
+  const [showUserDetails, setShowUserDetails] = useState(false);
 
   const handleLogout = () => {
     dispatch(logout());
-    navigate("/login"); 
+    navigate("/register"); 
   };
-  
+  const toggleUserDetails = () => {
+    setShowUserDetails((prev) => !prev);
+  };
 
   return (
     <div className="dashboard">
@@ -27,15 +27,29 @@ const Dashboard = () => {
         </div>
         <div className="user-info">
           <h3>Hi, {user?.username || "Guest"}!</h3> 
-          <img src="User.jpg" className="user-img" alt="User" height="40px" width="40px" />
+          <img src="User.jpg" className="user-img" alt="User" height="40px" width="40px"  onClick={toggleUserDetails} // Add the click handler
+            style={{ cursor: "pointer" }} />
         </div>
       </div>
+      
+      {showUserDetails && (
+        <div className="user-details">
+          <p>sdfasdf</p>
+        </div>
+      )} 
+
       <div className="dashboard-body">
       <div className="sidebar">
         <ul>
-          <li><Link to="/dashboard" className="sidebar-dashboard">Dashboard</Link></li>
-          <li><a href="#">Analytics</a></li>
-          <li><a href="#">Settings</a></li>
+          <li><Link to="/dashboard" className="sidebar-dashboard">Dashboard</Link>
+          <img src="Dashboard_icon.png" alt="" height='20px' width='20px'/>
+          </li>
+          <li><a href="#">Analytics</a>
+          <img src="Analytics.png" alt="" height='20px' width='20px' />
+          </li>
+          <li><a href="#">Settings</a>
+          <img src="Settings.png" alt="" height='20px' width='20px'  />
+          </li>
         </ul>
         <button onClick={handleLogout} className="logout-button">Logout</button>
       </div>

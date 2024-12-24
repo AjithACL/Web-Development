@@ -11,7 +11,7 @@ const Register = () => {
     password: "",
     confirmPassword: "",
   });
-  const error = useSelector((state) => state.auth.error); 
+  const error = useSelector((state) => state.auth.error);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -48,56 +48,57 @@ const Register = () => {
       dispatch(setError("Passwords do not match."));
     } else {
       dispatch(registerUser(formData));
-      navigate("/login"); 
+      navigate("/dashboard");
     }
   };
 
   return (
     <div className="Registercontainer">
       <h2>Sign Up</h2>
-      <img src="Developer_image.png" alt="" />
+      <img src="Developer_image.png" alt="" height="100px" width="100px" />
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="Register-username">
           <label htmlFor="username">Username</label>
           <input
             type="text"
             name="username"
             placeholder="Username"
-           
             onChange={handleChange}
+            required
           />
         </div>
-        <div>
+        <div className="Register-email">
           <label htmlFor="email">Email</label>
           <input
             type="email"
             name="email"
             placeholder="Email"
-          
             onChange={handleChange}
+            required
           />
         </div>
-        <div>
+        <div className="Register-password">
           <label htmlFor="password">Password</label>
           <input
             type="password"
             name="password"
             placeholder="Password"
-            
             onChange={handleChange}
+            required
           />
         </div>
-        <div>
+        <div className="Register-confirmpassword">
           <label htmlFor="confirmPassword">Confirm Password</label>
           <input
             type="password"
             name="confirmPassword"
             placeholder="Confirm Password"
-           
             onChange={handleChange}
+            required
           />
         </div>
-        {error && <span className="error">{error}</span>}
+        {error && <span className="error-register">{error}</span>}
+
         <button type="submit">Sign Up</button>
       </form>
       <div>

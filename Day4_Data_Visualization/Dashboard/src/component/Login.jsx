@@ -8,7 +8,7 @@ const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { registeredUsers, error } = useSelector((state) => state.auth); 
+  const { registeredUsers, error } = useSelector((state) => state.auth);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,7 +25,7 @@ const Login = () => {
 
     if (user) {
       dispatch(setUser(user));
-      navigate("/home"); 
+      navigate("/home");
     } else {
       dispatch(setError("Invalid email or password."));
     }
@@ -34,7 +34,7 @@ const Login = () => {
   return (
     <div className="Logincontainer">
       <h2>Log In</h2>
-      <img src="Developer_image.png" alt="" height="150px" width='150px'/>
+      <img src="Developer_image.png" alt="" height="100px" width="100px" />
       <form onSubmit={handleSubmit}>
         <div className="login-email">
           <label htmlFor="email">Email</label>
@@ -42,9 +42,7 @@ const Login = () => {
             type="email"
             name="email"
             placeholder="Email"
-          
             onChange={handleChange}
-           
           />
         </div>
         <div className="login-password">
@@ -53,15 +51,13 @@ const Login = () => {
             type="password"
             name="password"
             placeholder="Password"
-           
             onChange={handleChange}
-           
           />
         </div>
-        {error && <span className="error">{error}</span>}
+        {error && <span className="login-error">{error}</span>}
         <button type="submit">Log In</button>
       </form>
-      <div className="login-signup">
+      <div className="login-dont">
         Don't have an account? <Link to="/register">Sign Up</Link>
       </div>
     </div>

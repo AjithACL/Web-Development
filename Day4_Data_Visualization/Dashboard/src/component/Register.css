@@ -1,52 +1,80 @@
 .Registercontainer {
   width: 400px;
-  margin: 20px auto;
+  margin: 5px auto;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid black;
+  animation: slidein-register 1s forwards;
 }
 
 .Registercontainer .title {
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   color: #333;
+}
+.Registercontainer form {
+  display: flex;
+}
+.Registercontainer img {
+  margin: 10px 0;
+  border-radius: 50%;
+  border: 1px solid black;
 }
 
 .Registercontainer form {
   display: flex;
   flex-direction: column;
+  text-align: start;
+  gap: 15px;
 }
 
-.Registercontainer .input-group {
+/* .Register-username {
   display: flex;
-  align-items: center; 
-  margin-bottom: 15px;
+  align-items: center;
+} */
+/* .Register-email {
+  display: flex;
+  align-items: center;
 }
-
-.Registercontainer label {
-  width: 120px; 
-  text-align: left;
-  margin-right: 20px;
+.Register-password {
+  display: flex;
+  align-items: center;
 }
-
+.Register-confirmpassword {
+  display: flex;
+  align-items: center;
+} */
 .Registercontainer input {
-  width: 100%; 
-  padding: 10px;
+  width: 100%;
+  padding: 5px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #131212;
   border-radius: 5px;
+  margin-top: 5px;
 }
-.Registercontainer #email {
-  margin-left: 20px;
-}
+
 .Registercontainer button {
   padding: 10px;
   font-size: 16px;
   color: #fff;
-  background-color: hsl(131, 66%, 48%);
+  background-color: #506edc;
   border: none;
   border-radius: 5px;
+  margin: 3px 0;
   cursor: pointer;
+}
+.error-register {
+  color: red;
+  margin: 0 20%;
+}
+
+@keyframes slidein-register {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }

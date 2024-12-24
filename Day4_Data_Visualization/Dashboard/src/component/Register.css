@@ -1,6 +1,6 @@
 .Registercontainer {
   width: 400px;
-  margin: 5px auto;
+  margin: 30px auto;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -30,22 +30,6 @@
   gap: 15px;
 }
 
-/* .Register-username {
-  display: flex;
-  align-items: center;
-} */
-/* .Register-email {
-  display: flex;
-  align-items: center;
-}
-.Register-password {
-  display: flex;
-  align-items: center;
-}
-.Register-confirmpassword {
-  display: flex;
-  align-items: center;
-} */
 .Registercontainer input {
   width: 100%;
   padding: 5px;

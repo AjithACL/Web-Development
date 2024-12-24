@@ -34,21 +34,25 @@ const Dashboard = () => {
       
       {showUserDetails && (
         <div className="user-details">
-          <p>sdfasdf</p>
+          <h2>Profile</h2> <br />
+          {/* <h3>Hello {user?.username || "Guest"}</h3> */}
         </div>
       )} 
 
       <div className="dashboard-body">
       <div className="sidebar">
         <ul>
-          <li><Link to="/dashboard" className="sidebar-dashboard">Dashboard</Link>
+          <li>
           <img src="Dashboard_icon.png" alt="" height='20px' width='20px'/>
+            <Link to="/dashboard" className="sidebar-dashboard">Dashboard</Link>
           </li>
-          <li><a href="#">Analytics</a>
+          <li>
           <img src="Analytics.png" alt="" height='20px' width='20px' />
+          <Link to="/dataset" className="sidebar-dataset">Dataset</Link>
           </li>
-          <li><a href="#">Settings</a>
+          <li>
           <img src="Settings.png" alt="" height='20px' width='20px'  />
+            <a href="#">Settings</a>
           </li>
         </ul>
         <button onClick={handleLogout} className="logout-button">Logout</button>

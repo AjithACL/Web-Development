@@ -15,14 +15,18 @@
   color: #333;
 }
 
+.Logincontainer img{
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-top: 10px;
+}
+
 .Logincontainer form {
   display: flex;
   flex-direction: column;
 }
 
-.input-group {
-  margin-bottom: 15px;
-}
+
 
 .Logincontainer input {
   width: 100%;
@@ -40,25 +44,28 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 10px;
 }
-.login-email input {
-  margin-left: 40px;
+.login-email input{
+  margin-top: 10px;
+
 }
-.login-password input {
-  margin-left: 10px;
+.login-password input{
+  margin-top: 10px;
 }
-.login-email {
+.login-email{
+  margin-top: 10px;
   display: flex;
-  align-items: center;
-  justify-self: center;
-  margin: 10px;
+  flex-direction: column;
+  align-items: start;
 }
-.login-password {
+.login-password{
+  margin-top: 20px;
   display: flex;
-  align-items: center;
-  justify-self: center;
-  margin: 10px;
+  flex-direction: column;
+  align-items: start;
 }
+
 .login-error {
   color: red;
   margin: 10px;

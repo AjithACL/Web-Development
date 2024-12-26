@@ -12,9 +12,9 @@ const Footer = () => {
     <>
     <footer>
     <div className="socialmedia">
-    <FontAwesomeIcon icon={faInstagram} style={{color:"white",height:'50px'}} />
-      <FontAwesomeIcon icon={faFacebook} style={{color:"white",height:'50px'}}/>
-      <FontAwesomeIcon icon={faLinkedin} style={{color:"white",height:'50px'}}/>
+    <FontAwesomeIcon icon={faInstagram} style={{height:'50px'}} />
+      <FontAwesomeIcon icon={faFacebook} style={{height:'50px'}}/>
+      <FontAwesomeIcon icon={faLinkedin} style={{height:'50px'}}/>
     </div>
     </footer>
     

@@ -5,11 +5,11 @@ nav{
     border-bottom: 2px solid violet;
 }
 .nav-logo{
-    color: white;
+  
     margin:10px 20px;
 }
 nav ul li{
-    color: white;
+
     text-decoration: none;
     margin: 20px 10px;
 }
@@ -28,7 +28,7 @@ nav .nav-btn button{
 
 .Login-btn{
     background-color: red;
-    
+    margin-right: 10px;
 
 }
 .register-btn{

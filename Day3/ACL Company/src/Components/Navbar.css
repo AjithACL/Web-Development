@@ -41,8 +41,9 @@ nav .nav-btn button{
     justify-content: space-between;
 }
 
+
 @media (max-width:940px){
     nav{
-        background-color: orange;
+       
     }
 }

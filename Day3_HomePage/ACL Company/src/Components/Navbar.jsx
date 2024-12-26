@@ -1,7 +1,16 @@
+import { useNavigate } from "react-router-dom"
 import "./Navbar.css"
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faBars } from "@fortawesome/free-brands-svg-icons";
 const Navbar=()=>{
+    const navigate=useNavigate();
+    const loginpage=()=>{
+        navigate("/login")
+
+    }
+    const registerPage=()=>{
+        navigate("/register")
+    }
 return(
 <>
 <nav>
@@ -16,12 +25,10 @@ return(
     <li>Contact</li>
 </ul>
 <div className="nav-btn">
-    <button className="Login-btn">Login</button>
-    <button className="register-btn">Register</button>
+    <button className="Login-btn" onClick={loginpage}>Login</button>
+    <button className="register-btn" onClick={registerPage}>Register</button>
 </div>
-<div className="bar">
-{/* <FontAwesomeIcon icon={faBars} /> */}
-</div>
+
 
 </nav>
 </>)

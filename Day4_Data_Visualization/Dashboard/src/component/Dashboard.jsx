@@ -5,6 +5,7 @@ import { logout } from "../Redux/authSlice";
 import "./Dashboard.css";
 import Tiles from "./Tiles";
 import Dataset from "../Dataset/Dataset"; // Import Dataset component
+import Studies from "./Studies";
 
 const Dashboard = () => {
   const dispatch = useDispatch();
@@ -26,7 +27,7 @@ const Dashboard = () => {
   const renderContent = () => {
     switch (activeMenu) {
       case "dashboard":
-        return <Tiles />;
+        return <Studies />;
       case "dataset":
         return <Dataset />;
       case "settings":
@@ -71,7 +72,7 @@ const Dashboard = () => {
               className={activeMenu === "dashboard" ? "active" : ""}
             >
               <img src="Dashboard_icon.png" alt="" height="20px" width="20px" style={{margin:'0 10px'}} />
-              <span>Dashboard</span>
+              <span>Studies</span>
             </li>
             <li
               onClick={() => setActiveMenu("dataset")}

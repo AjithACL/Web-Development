@@ -1,6 +1,5 @@
 import "./Navbar.css"
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faBars } from "@fortawesome/free-brands-svg-icons";
+
 const Navbar=()=>{
 return(
 <>

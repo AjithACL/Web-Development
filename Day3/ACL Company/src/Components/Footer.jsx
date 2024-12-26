@@ -6,7 +6,6 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 
-
 const Footer = () => {
   return (
     <>
